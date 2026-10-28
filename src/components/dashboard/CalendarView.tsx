@@ -595,7 +595,7 @@ export const CalendarView: React.FC<Props> = ({
                     <span
                       className={`text-xs font-mono font-bold ${
                         cell.isSelected
-                          ? 'w-5 h-5 rounded-full bg-white text-[#0A1B14] flex items-center justify-center text-[11px]'
+                          ? 'w-5 h-5 rounded-full bg-white text-[#07130E] flex items-center justify-center text-[11px]'
                           : cell.inCurrentMonth
                           ? 'text-white'
                           : 'text-white/40'

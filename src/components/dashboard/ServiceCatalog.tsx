@@ -57,20 +57,20 @@ export const ServiceCatalog: React.FC<Props> = ({
     <div className="space-y-6">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0F241C] p-4 rounded-3xl border border-[#C9A86A]/35 shadow-xl">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0D221A] p-4 rounded-3xl border border-white/10 shadow-xl">
         <div>
           <h3 className="text-lg font-bold text-white flex items-center gap-2">
             <Scissors className="w-5 h-5 text-[#C9A86A]" />
             <span>Service Catalog & Buffer Times</span>
           </h3>
-          <p className="text-xs text-[#E5EBE7]">
+          <p className="text-xs text-[#D5DFDA]">
             Define durations, cleanup buffer times, pricing, and required deposit policies.
           </p>
         </div>
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="px-4 py-2 rounded-xl gold-gradient-bg text-[#0A1B14] font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer hover:brightness-105"
+          className="px-4 py-2 rounded-xl gold-gradient-bg text-[#07130E] font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer hover:brightness-105"
         >
           <Plus className="w-4 h-4" />
           <span>Add New Service</span>
@@ -91,13 +91,13 @@ export const ServiceCatalog: React.FC<Props> = ({
                 {catServices.map((service) => (
                   <div
                     key={service.id}
-                    className="bg-[#0F241C] rounded-3xl border border-[#C9A86A]/30 p-5 shadow-lg flex flex-col justify-between hover:border-[#C9A86A] transition-colors"
+                    className="bg-[#0D221A] rounded-3xl border border-white/10 p-5 shadow-lg flex flex-col justify-between hover:border-white/30 transition-colors"
                   >
                     <div className="space-y-2">
                       <div className="flex items-start justify-between">
                         <div>
                           <h5 className="font-bold text-sm text-white">{service.name}</h5>
-                          <div className="flex items-center gap-2 mt-1 text-xs text-[#E5EBE7] font-mono">
+                          <div className="flex items-center gap-2 mt-1 text-xs text-[#D5DFDA] font-mono">
                             <span className="flex items-center gap-1">
                               <Clock className="w-3.5 h-3.5 text-[#C9A86A]" />
                               {service.durationMinutes} min
@@ -112,12 +112,12 @@ export const ServiceCatalog: React.FC<Props> = ({
                         </span>
                       </div>
 
-                      <p className="text-xs text-[#E5EBE7] leading-relaxed pt-1">
+                      <p className="text-xs text-[#D5DFDA] leading-relaxed pt-1">
                         {service.description}
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-4 mt-4 border-t border-[#1C4435] text-xs text-[#E5EBE7]/70">
+                    <div className="flex items-center justify-between pt-4 mt-4 border-t border-[#1B362A] text-xs text-[#D5DFDA]/70">
                       <span className="flex items-center gap-1 text-emerald-400 font-medium">
                         <Shield className="w-3.5 h-3.5" />
                         Deposit: ${service.depositAmount}
@@ -142,10 +142,10 @@ export const ServiceCatalog: React.FC<Props> = ({
       {/* Add Service Modal */}
       {showAddModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in">
-          <div className="relative w-full max-w-md rounded-3xl bg-[#0F241C] border border-[#C9A86A] p-6 shadow-2xl text-white space-y-4">
+          <div className="relative w-full max-w-md rounded-3xl bg-[#0D221A] border border-white/20 p-6 shadow-2xl text-white space-y-4">
             <button
               onClick={() => setShowAddModal(false)}
-              className="absolute top-4 right-4 text-[#E5EBE7] hover:text-white p-1"
+              className="absolute top-4 right-4 text-[#D5DFDA] hover:text-white p-1"
             >
               <X className="w-5 h-5" />
             </button>
@@ -164,7 +164,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                   placeholder="e.g. Sculpting Microcurrent Facial"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                 />
               </div>
 
@@ -175,7 +175,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                   placeholder="e.g. Facial Treatments or Hair Color"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                 />
               </div>
 
@@ -188,7 +188,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                     step="5"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}
-                    className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                    className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                   />
                 </div>
 
@@ -200,7 +200,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                     step="5"
                     value={buffer}
                     onChange={(e) => setBuffer(Number(e.target.value))}
-                    className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                    className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                   />
                 </div>
               </div>
@@ -214,7 +214,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                     step="5"
                     value={price}
                     onChange={(e) => handlePriceChange(Number(e.target.value))}
-                    className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                    className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                   />
                 </div>
 
@@ -226,7 +226,7 @@ export const ServiceCatalog: React.FC<Props> = ({
                     step="1"
                     value={deposit}
                     onChange={(e) => setDeposit(Number(e.target.value))}
-                    className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                    className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                   />
                 </div>
               </div>
@@ -238,14 +238,14 @@ export const ServiceCatalog: React.FC<Props> = ({
                   placeholder="Outline treatment steps, benefits, and aftercare advice..."
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white text-xs focus:outline-none focus:border-white/30"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl gold-gradient-bg text-[#0A1B14] font-bold text-xs transition-all shadow-md hover:brightness-105"
+                  className="w-full py-3 rounded-xl gold-gradient-bg text-[#07130E] font-bold text-xs transition-all shadow-md hover:brightness-105"
                 >
                   Publish Service to Booking Menu
                 </button>

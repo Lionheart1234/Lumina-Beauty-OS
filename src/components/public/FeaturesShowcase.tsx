@@ -91,17 +91,17 @@ export const FeaturesShowcase: React.FC = () => {
   const current = features[activeTab];
 
   return (
-    <section id="features" className="py-20 md:py-28 bg-[#0A1B14] relative">
+    <section id="features" className="py-20 md:py-28 bg-[#07130E] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest font-bold text-[#C9A86A] px-3.5 py-1 rounded-full bg-[#C9A86A]/10 border border-[#C9A86A]/30">
+          <span className="text-xs uppercase tracking-widest font-bold text-[#C9A86A] px-3.5 py-1 rounded-full bg-[#C9A86A]/10 border border-white/10">
             Engineered for Beauty & Wellness
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Everything You Need to Operate & Scale
           </h2>
-          <p className="text-[#E5EBE7] text-base md:text-lg">
+          <p className="text-[#D5DFDA] text-base md:text-lg">
             Purpose-built tools that streamline your daily appointments, delight your clients, and protect your profit margins.
           </p>
         </div>
@@ -112,8 +112,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('busy')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'busy'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20 font-extrabold'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20 font-extrabold'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <Flame className="w-4 h-4 text-[#C9A86A]" />
@@ -124,8 +124,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('booking')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'booking'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <Calendar className="w-4 h-4" />
@@ -136,8 +136,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('crm')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'crm'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <FileText className="w-4 h-4" />
@@ -148,8 +148,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('checkout')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'checkout'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <CreditCard className="w-4 h-4" />
@@ -160,8 +160,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('microsite')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'microsite'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <Smartphone className="w-4 h-4" />
@@ -172,8 +172,8 @@ export const FeaturesShowcase: React.FC = () => {
             onClick={() => setActiveTab('teams')}
             className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
               activeTab === 'teams'
-                ? 'gold-gradient-bg text-[#0A1B14] shadow-lg shadow-[#C9A86A]/20'
-                : 'bg-[#0F241C] border border-[#1C4435] text-[#E5EBE7] hover:text-white hover:border-[#C9A86A]/50'
+                ? 'gold-gradient-bg text-[#07130E] shadow-lg shadow-[#C9A86A]/20'
+                : 'bg-[#0D221A] border border-white/10 text-[#D5DFDA] hover:text-white hover:border-white/30/50'
             }`}
           >
             <Layers className="w-4 h-4" />
@@ -182,11 +182,11 @@ export const FeaturesShowcase: React.FC = () => {
         </div>
 
         {/* Feature Detail Showcase Card */}
-        <div className="rounded-3xl bg-[#0F241C] border border-[#C9A86A]/35 p-8 md:p-12 shadow-2xl">
+        <div className="rounded-3xl bg-[#0D221A] border border-white/10 p-8 md:p-12 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C9A86A] bg-[#C9A86A]/15 border border-[#C9A86A]/30 px-3.5 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#C9A86A] bg-[#C9A86A]/15 border border-white/10 px-3.5 py-1 rounded-full">
                 {current.badge}
               </span>
               
@@ -194,13 +194,13 @@ export const FeaturesShowcase: React.FC = () => {
                 {current.title}
               </h3>
               
-              <p className="text-[#E5EBE7] text-base leading-relaxed">
+              <p className="text-[#D5DFDA] text-base leading-relaxed">
                 {current.desc}
               </p>
 
               <div className="space-y-3 pt-2">
                 {current.bullets.map((bullet, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-sm text-[#E5EBE7]">
+                  <div key={idx} className="flex items-start gap-3 text-sm text-[#D5DFDA]">
                     <CheckCircle2 className="w-4 h-4 text-[#C9A86A] shrink-0 mt-0.5" />
                     <span>{bullet}</span>
                   </div>
@@ -209,16 +209,16 @@ export const FeaturesShowcase: React.FC = () => {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden border border-[#C9A86A]/30 shadow-2xl group">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                 <img
                   src={current.previewImg}
                   alt={current.title}
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1B14] via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4 p-3 bg-[#0A1B14]/95 backdrop-blur-md rounded-xl border border-[#1C4435] text-xs text-[#E5EBE7] flex items-center justify-between">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07130E] via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4 p-3 bg-[#07130E]/95 backdrop-blur-md rounded-xl border border-white/10 text-xs text-[#D5DFDA] flex items-center justify-between">
                   <span className="font-bold text-[#C9A86A]">Lumina Beauty OS</span>
-                  <span className="text-[#E5EBE7]/70">Included in all plans</span>
+                  <span className="text-[#D5DFDA]/70">Included in all plans</span>
                 </div>
               </div>
             </div>

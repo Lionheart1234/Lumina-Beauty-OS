@@ -210,9 +210,9 @@ export function App() {
           </main>
 
           {/* Footer */}
-          <footer className="border-t border-[#1C4435] bg-[#07130E] py-12 text-center text-xs text-[#E5EBE7]/60 space-y-3">
+          <footer className="border-t border-[#1B362A] bg-[#07130E] py-12 text-center text-xs text-[#D5DFDA]/60 space-y-3">
             <div className="flex items-center justify-center gap-2 font-bold text-white text-sm">
-              <span className="w-6 h-6 rounded-lg gold-gradient-bg text-[#0A1B14] flex items-center justify-center text-xs font-bold">L</span>
+              <span className="w-6 h-6 rounded-lg gold-gradient-bg text-[#07130E] flex items-center justify-center text-xs font-bold">L</span>
               <span>LUMINA BEAUTY OS</span>
             </div>
             <p>Modern, affordable business management and online scheduling for the beauty and wellness industry.</p>

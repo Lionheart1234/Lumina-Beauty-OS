@@ -22,7 +22,7 @@ export const RoleSwitcherBar: React.FC<Props> = ({
   handles,
 }) => {
   return (
-    <div className="sticky top-0 z-50 bg-[#07130E]/95 backdrop-blur-md border-b border-[#C9A86A]/30 text-xs text-[#E5EBE7] px-3 py-2">
+    <div className="sticky top-0 z-50 bg-[#07130E]/95 backdrop-blur-md border-b border-[#C9A86A]/30 text-xs text-[#D5DFDA] px-3 py-2">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         {/* Left: Role Switcher Buttons */}
         <div className="flex items-center gap-1.5 flex-wrap">
@@ -35,8 +35,8 @@ export const RoleSwitcherBar: React.FC<Props> = ({
             onClick={() => onSelectRole('public_marketing')}
             className={`px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
               activeRole === 'public_marketing'
-                ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                : 'bg-[#0F241C] hover:bg-[#143026] text-[#E5EBE7] border border-[#1C4435]'
+                ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                : 'bg-[#0D221A] hover:bg-[#091712] text-[#D5DFDA] border border-white/10'
             }`}
           >
             <Globe className="w-3.5 h-3.5" />
@@ -50,8 +50,8 @@ export const RoleSwitcherBar: React.FC<Props> = ({
             }}
             className={`px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 relative cursor-pointer ${
               activeRole === 'solo_dashboard'
-                ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                : 'bg-[#0F241C] hover:bg-[#143026] text-[#E5EBE7] border border-[#1C4435]'
+                ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                : 'bg-[#0D221A] hover:bg-[#091712] text-[#D5DFDA] border border-white/10'
             }`}
           >
             <User className="w-3.5 h-3.5" />
@@ -70,8 +70,8 @@ export const RoleSwitcherBar: React.FC<Props> = ({
             }}
             className={`px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
               activeRole === 'salon_dashboard'
-                ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                : 'bg-[#0F241C] hover:bg-[#143026] text-[#E5EBE7] border border-[#1C4435]'
+                ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                : 'bg-[#0D221A] hover:bg-[#091712] text-[#D5DFDA] border border-white/10'
             }`}
           >
             <Users className="w-3.5 h-3.5" />
@@ -82,8 +82,8 @@ export const RoleSwitcherBar: React.FC<Props> = ({
             onClick={() => onSelectRole('client_booking')}
             className={`px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
               activeRole === 'client_booking'
-                ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                : 'bg-[#0F241C] hover:bg-[#143026] text-[#E5EBE7] border border-[#1C4435]'
+                ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                : 'bg-[#0D221A] hover:bg-[#091712] text-[#D5DFDA] border border-white/10'
             }`}
           >
             <Smartphone className="w-3.5 h-3.5" />
@@ -94,8 +94,8 @@ export const RoleSwitcherBar: React.FC<Props> = ({
             onClick={() => onSelectRole('marketplace')}
             className={`px-2.5 py-1 rounded-lg font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
               activeRole === 'marketplace'
-                ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                : 'bg-[#0F241C] hover:bg-[#143026] text-[#E5EBE7] border border-[#1C4435]'
+                ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                : 'bg-[#0D221A] hover:bg-[#091712] text-[#D5DFDA] border border-white/10'
             }`}
           >
             <Compass className="w-3.5 h-3.5" />
@@ -107,11 +107,11 @@ export const RoleSwitcherBar: React.FC<Props> = ({
         <div className="flex items-center gap-2">
           {activeRole === 'client_booking' && (
             <div className="flex items-center gap-1">
-              <span className="text-[#E5EBE7]/70 text-[11px]">Pro Microsite:</span>
+              <span className="text-[#D5DFDA]/70 text-[11px]">Pro Microsite:</span>
               <select
                 value={currentHandle}
                 onChange={(e) => onSelectHandle(e.target.value)}
-                className="bg-[#0A1B14] border border-[#1C4435] rounded px-2 py-0.5 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                className="bg-[#07130E] border border-white/10 rounded px-2 py-0.5 text-white text-xs focus:outline-none focus:border-white/30"
               >
                 {handles.map((h) => (
                   <option key={h.handle} value={h.handle}>
@@ -125,7 +125,7 @@ export const RoleSwitcherBar: React.FC<Props> = ({
           <button
             onClick={onResetData}
             title="Reset demo data to initial defaults"
-            className="text-[11px] text-[#E5EBE7]/80 hover:text-white px-2 py-0.5 rounded border border-[#1C4435] hover:border-[#C9A86A] transition-colors cursor-pointer"
+            className="text-[11px] text-[#D5DFDA]/80 hover:text-white px-2 py-0.5 rounded border border-white/10 hover:border-white/30 transition-colors cursor-pointer"
           >
             Reset Demo Data
           </button>

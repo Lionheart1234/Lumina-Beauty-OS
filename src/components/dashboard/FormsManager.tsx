@@ -94,13 +94,13 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
     <div className="space-y-6 max-w-5xl">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0F241C] p-4 rounded-3xl border border-[#C9A86A]/35 shadow-xl">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0D221A] p-4 rounded-3xl border border-white/10 shadow-xl">
         <div>
           <h3 className="text-lg font-bold text-white flex items-center gap-2">
             <FileCheck2 className="w-5 h-5 text-[#C9A86A]" />
             <span>Customizable Intake Forms & Waivers</span>
           </h3>
-          <p className="text-xs text-[#E5EBE7]">
+          <p className="text-xs text-[#D5DFDA]">
             Configure the exact questions and legal liability waivers your clients must complete when booking on your microsite.
           </p>
         </div>
@@ -114,7 +114,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
 
           <button
             onClick={handleSave}
-            className="px-5 py-2.5 rounded-xl gold-gradient-bg text-[#0A1B14] font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer hover:brightness-105"
+            className="px-5 py-2.5 rounded-xl gold-gradient-bg text-[#07130E] font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer hover:brightness-105"
           >
             <Check className="w-4 h-4" />
             <span>Publish to Booking Site</span>
@@ -128,8 +128,8 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
           onClick={() => setActiveTab('editor')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             activeTab === 'editor'
-              ? 'gold-gradient-bg text-[#0A1B14] shadow-md'
-              : 'bg-[#0F241C] text-[#E5EBE7] border border-[#1C4435] hover:border-[#C9A86A]/50'
+              ? 'gold-gradient-bg text-[#07130E] shadow-md'
+              : 'bg-[#0D221A] text-[#D5DFDA] border border-white/10 hover:border-white/30/50'
           }`}
         >
           <Settings2 className="w-3.5 h-3.5 inline mr-1.5" />
@@ -140,8 +140,8 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
           onClick={() => setActiveTab('preview')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             activeTab === 'preview'
-              ? 'gold-gradient-bg text-[#0A1B14] shadow-md'
-              : 'bg-[#0F241C] text-[#E5EBE7] border border-[#1C4435] hover:border-[#C9A86A]/50'
+              ? 'gold-gradient-bg text-[#07130E] shadow-md'
+              : 'bg-[#0D221A] text-[#D5DFDA] border border-white/10 hover:border-white/30/50'
           }`}
         >
           <Eye className="w-3.5 h-3.5 inline mr-1.5" />
@@ -153,21 +153,21 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
         <div className="space-y-6">
           
           {/* Section 1: Custom Questionnaire Fields */}
-          <div className="bg-[#0F241C] rounded-3xl border border-[#C9A86A]/35 p-6 md:p-8 space-y-6 shadow-xl">
-            <div className="flex items-center justify-between pb-4 border-b border-[#1C4435]">
+          <div className="bg-[#0D221A] rounded-3xl border border-white/10 p-6 md:p-8 space-y-6 shadow-xl">
+            <div className="flex items-center justify-between pb-4 border-b border-[#1B362A]">
               <div>
                 <h4 className="text-base font-bold text-white flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-[#C9A86A]" />
                   <span>Pre-Service Client Questions</span>
                 </h4>
-                <p className="text-xs text-[#E5EBE7]/80 mt-0.5">
+                <p className="text-xs text-[#D5DFDA]/80 mt-0.5">
                   Questions asked to the client during step 3 of online booking.
                 </p>
               </div>
 
               <button
                 onClick={() => setShowAddQuestionModal(true)}
-                className="px-3.5 py-1.5 rounded-xl bg-[#143026] hover:bg-[#1C4435] border border-[#C9A86A]/40 text-[#C9A86A] font-semibold text-xs flex items-center gap-1.5 cursor-pointer"
+                className="px-3.5 py-1.5 rounded-xl bg-[#091712] hover:bg-[#1B362A] border border-white/20/40 text-[#C9A86A] font-semibold text-xs flex items-center gap-1.5 cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add Question</span>
@@ -180,14 +180,14 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                   key={field.id}
                   className={`p-4 rounded-2xl border transition-all flex items-center justify-between gap-4 text-xs ${
                     field.enabled
-                      ? 'bg-[#0A1B14] border-[#C9A86A]/40'
-                      : 'bg-[#0A1B14]/50 border-[#1C4435] opacity-60'
+                      ? 'bg-[#07130E] border-white/10'
+                      : 'bg-[#07130E]/50 border-[#1B362A] opacity-60'
                   }`}
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-white text-sm">{field.label}</span>
-                      <span className="text-[10px] font-mono uppercase bg-[#143026] text-[#C9A86A] px-2 py-0.5 rounded border border-[#1C4435]">
+                      <span className="text-[10px] font-mono uppercase bg-[#091712] text-[#C9A86A] px-2 py-0.5 rounded border border-white/10">
                         {field.type}
                       </span>
                       {field.required && (
@@ -197,7 +197,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                       )}
                     </div>
                     {field.options && (
-                      <p className="text-[11px] text-[#E5EBE7]/70">
+                      <p className="text-[11px] text-[#D5DFDA]/70">
                         Options: {field.options.join(' • ')}
                       </p>
                     )}
@@ -215,7 +215,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
 
                     <button
                       onClick={() => handleDeleteField(field.id)}
-                      className="text-[#E5EBE7]/60 hover:text-rose-400 p-1 cursor-pointer"
+                      className="text-[#D5DFDA]/60 hover:text-rose-400 p-1 cursor-pointer"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -226,13 +226,13 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
           </div>
 
           {/* Section 2: Custom Liability Waiver & Signature */}
-          <div className="bg-[#0F241C] rounded-3xl border border-[#C9A86A]/35 p-6 md:p-8 space-y-6 shadow-xl">
-            <div className="pb-4 border-b border-[#1C4435]">
+          <div className="bg-[#0D221A] rounded-3xl border border-white/10 p-6 md:p-8 space-y-6 shadow-xl">
+            <div className="pb-4 border-b border-[#1B362A]">
               <h4 className="text-base font-bold text-white flex items-center gap-2">
                 <FileSignature className="w-4 h-4 text-[#C9A86A]" />
                 <span>Custom Legal Liability Waiver & Consent Text</span>
               </h4>
-              <p className="text-xs text-[#E5EBE7]/80 mt-0.5">
+              <p className="text-xs text-[#D5DFDA]/80 mt-0.5">
                 Every client must review this waiver and electronically sign before their booking is finalized.
               </p>
             </div>
@@ -244,7 +244,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                   type="text"
                   value={waiverTitle}
                   onChange={(e) => setWaiverTitle(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-white/30"
                 />
               </div>
 
@@ -254,7 +254,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                   rows={4}
                   value={waiverText}
                   onChange={(e) => setWaiverText(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl p-3.5 text-white text-xs leading-relaxed focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl p-3.5 text-white text-xs leading-relaxed focus:outline-none focus:border-white/30"
                 />
               </div>
 
@@ -276,8 +276,8 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
         </div>
       ) : (
         /* LIVE PREVIEW OF MICROSITE INTAKE SECTION */
-        <div className="bg-[#0F241C] rounded-3xl border border-[#C9A86A] p-6 md:p-8 space-y-6 shadow-2xl">
-          <div className="pb-4 border-b border-[#1C4435] flex items-center justify-between">
+        <div className="bg-[#0D221A] rounded-3xl border border-white/20 p-6 md:p-8 space-y-6 shadow-2xl">
+          <div className="pb-4 border-b border-[#1B362A] flex items-center justify-between">
             <div>
               <span className="text-[10px] font-bold text-[#C9A86A] uppercase tracking-wider">
                 Microsite Live Preview
@@ -289,37 +289,37 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
             </span>
           </div>
 
-          <div className="bg-[#0A1B14] rounded-2xl p-6 border border-[#1C4435] space-y-5 text-xs">
+          <div className="bg-[#07130E] rounded-2xl p-6 border border-white/10 space-y-5 text-xs">
             <h5 className="font-bold text-white text-sm">Client Pre-Service Consultation</h5>
             
             {fields.filter((f) => f.enabled).map((field) => (
               <div key={field.id} className="space-y-1">
-                <label className="block font-medium text-[#E5EBE7]">
+                <label className="block font-medium text-[#D5DFDA]">
                   {field.label} {field.required && <span className="text-rose-400">*</span>}
                 </label>
                 {field.type === 'select' ? (
-                  <select className="w-full bg-[#143026] border border-[#1C4435] rounded-xl px-3 py-2 text-white">
+                  <select className="w-full bg-[#091712] border border-white/10 rounded-xl px-3 py-2 text-white">
                     {field.options?.map((opt, i) => (
                       <option key={i}>{opt}</option>
                     ))}
                   </select>
                 ) : field.type === 'textarea' ? (
-                  <textarea rows={2} className="w-full bg-[#143026] border border-[#1C4435] rounded-xl px-3 py-2 text-white" />
+                  <textarea rows={2} className="w-full bg-[#091712] border border-white/10 rounded-xl px-3 py-2 text-white" />
                 ) : (
-                  <input type="text" placeholder="Client answer..." className="w-full bg-[#143026] border border-[#1C4435] rounded-xl px-3 py-2 text-white" />
+                  <input type="text" placeholder="Client answer..." className="w-full bg-[#091712] border border-white/10 rounded-xl px-3 py-2 text-white" />
                 )}
               </div>
             ))}
 
-            <div className="p-4 bg-[#143026] rounded-xl border border-[#1C4435] space-y-2">
+            <div className="p-4 bg-[#091712] rounded-xl border border-white/10 space-y-2">
               <p className="font-bold text-white">Liability Acknowledgment</p>
-              <p className="text-[#E5EBE7] leading-relaxed text-[11px]">{waiverText}</p>
+              <p className="text-[#D5DFDA] leading-relaxed text-[11px]">{waiverText}</p>
             </div>
 
             {requireSignature && (
-              <div className="p-4 bg-[#0A1B14] rounded-xl border border-[#C9A86A]/35 space-y-2">
+              <div className="p-4 bg-[#07130E] rounded-xl border border-white/10 space-y-2">
                 <span className="font-bold text-white text-xs block">Client Digital Touch Signature *</span>
-                <div className="h-14 rounded-lg bg-[#143026] border border-dashed border-[#C9A86A]/50 flex items-center justify-center font-serif italic text-[#C9A86A] text-base select-none">
+                <div className="h-14 rounded-lg bg-[#091712] border border-dashed border-white/15 flex items-center justify-center font-serif italic text-[#C9A86A] text-base select-none">
                   Taylor Morgan (Digitally Signed)
                 </div>
               </div>
@@ -331,7 +331,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
       {/* Add Custom Question Modal */}
       {showAddQuestionModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in">
-          <div className="relative w-full max-w-md rounded-3xl bg-[#0F241C] border border-[#C9A86A] p-6 shadow-2xl text-white space-y-4">
+          <div className="relative w-full max-w-md rounded-3xl bg-[#0D221A] border border-white/20 p-6 shadow-2xl text-white space-y-4">
             <h4 className="text-base font-bold text-white flex items-center gap-2">
               <Plus className="w-4 h-4 text-[#C9A86A]" />
               <span>Add Custom Intake Question</span>
@@ -346,7 +346,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                   placeholder="e.g. Previous Henna or Box Dye History"
                   value={newQuestionLabel}
                   onChange={(e) => setNewQuestionLabel(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-white/30"
                 />
               </div>
 
@@ -355,7 +355,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                 <select
                   value={newQuestionType}
                   onChange={(e) => setNewQuestionType(e.target.value as any)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-white/30"
                 >
                   <option value="text">Single-line Text</option>
                   <option value="textarea">Multi-line Paragraph</option>
@@ -371,7 +371,7 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                     value={newQuestionOptions}
                     onChange={(e) => setNewQuestionOptions(e.target.value)}
                     placeholder="Option 1, Option 2, Option 3"
-                    className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-white focus:outline-none focus:border-[#C9A86A]"
+                    className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-white/30"
                   />
                 </div>
               )}
@@ -380,13 +380,13 @@ export const FormsManager: React.FC<Props> = ({ business, onUpdateBusiness }) =>
                 <button
                   type="button"
                   onClick={() => setShowAddQuestionModal(false)}
-                  className="py-2.5 rounded-xl bg-[#143026] text-[#E5EBE7] font-medium"
+                  className="py-2.5 rounded-xl bg-[#091712] text-[#D5DFDA] font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="py-2.5 rounded-xl gold-gradient-bg text-[#0A1B14] font-bold shadow-md cursor-pointer"
+                  className="py-2.5 rounded-xl gold-gradient-bg text-[#07130E] font-bold shadow-md cursor-pointer"
                 >
                   Add Question
                 </button>

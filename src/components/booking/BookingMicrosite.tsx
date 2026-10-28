@@ -153,7 +153,7 @@ END:VCALENDAR`;
     <div className="min-h-screen bg-[#07130E] text-[#FFFFFF] pb-24 font-sans selection:bg-[#C9A86A]/20">
       
       {/* Top Banner & Pro Cover Hero */}
-      <div className="relative h-60 md:h-72 w-full overflow-hidden bg-[#0A1B14]">
+      <div className="relative h-60 md:h-72 w-full overflow-hidden bg-[#07130E]">
         <img
           src={business.coverImage}
           alt={business.name}
@@ -243,7 +243,7 @@ END:VCALENDAR`;
                 <div className="flex items-center justify-center gap-1.5">
                   <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold ${
                     isActive
-                      ? 'bg-white text-[#0A1B14]'
+                      ? 'bg-white text-[#07130E]'
                       : isDone
                       ? 'bg-emerald-500/20 text-emerald-400'
                       : 'bg-white/10 text-white/40'

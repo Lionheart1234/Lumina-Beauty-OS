@@ -85,23 +85,23 @@ export const DashboardLayout: React.FC<Props> = ({
       
       {/* Sidebar Navigation */}
       <aside
-        className={`fixed md:sticky top-9 md:top-9 z-30 h-[calc(100vh-2.25rem)] w-64 bg-[#0B1E16] border-r border-[#1C4435] p-4 flex flex-col justify-between transition-transform duration-200 ease-in-out ${
+        className={`fixed md:sticky top-9 md:top-9 z-30 h-[calc(100vh-2.25rem)] w-64 bg-[#0B1E16] border-r border-[#1B362A] p-4 flex flex-col justify-between transition-transform duration-200 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
         <div className="space-y-6">
           {/* Business Profile Card in Sidebar */}
-          <div className="p-3.5 rounded-2xl bg-[#0F241C] border border-[#C9A86A]/35 flex items-center justify-between shadow-md">
+          <div className="p-3.5 rounded-2xl bg-[#0D221A] border border-white/10 flex items-center justify-between shadow-md">
             <div className="flex items-center gap-3 overflow-hidden">
               <img
                 src={business.avatar}
                 alt={business.name}
-                className="w-10 h-10 rounded-xl object-cover border border-[#C9A86A]/50 shrink-0"
+                className="w-10 h-10 rounded-xl object-cover border border-white/20/50 shrink-0"
               />
               <div className="truncate">
                 <h3 className="font-bold text-sm text-white truncate">{business.name}</h3>
                 <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="text-[10px] font-bold text-[#C9A86A] uppercase tracking-wider bg-[#C9A86A]/15 px-2 py-0.2 rounded border border-[#C9A86A]/30">
+                  <span className="text-[10px] font-bold text-[#C9A86A] uppercase tracking-wider bg-[#C9A86A]/15 px-2 py-0.2 rounded border border-white/10">
                     {business.tier === 'solo' ? 'Solo $39.99' : 'Salon $59.99'}
                   </span>
                 </div>
@@ -127,8 +127,8 @@ export const DashboardLayout: React.FC<Props> = ({
                   }}
                   className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                     isActive
-                      ? 'gold-gradient-bg text-[#0A1B14] font-bold shadow-md'
-                      : 'text-[#E5EBE7] hover:text-white hover:bg-[#143026]'
+                      ? 'gold-gradient-bg text-[#07130E] font-bold shadow-md'
+                      : 'text-[#D5DFDA] hover:text-white hover:bg-[#091712]'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -147,15 +147,15 @@ export const DashboardLayout: React.FC<Props> = ({
         </div>
 
         {/* Sidebar Footer: View Client Microsite */}
-        <div className="pt-4 border-t border-[#1C4435] space-y-2">
+        <div className="pt-4 border-t border-[#1B362A] space-y-2">
           <button
             onClick={onOpenBookingSite}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-[#0F241C] hover:bg-[#143026] text-xs font-semibold text-white border border-[#C9A86A]/35 transition-colors cursor-pointer group"
+            className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-[#0D221A] hover:bg-[#091712] text-xs font-semibold text-white border border-white/10 transition-colors cursor-pointer group"
           >
             <span>View Client Booking Site</span>
             <ExternalLink className="w-3.5 h-3.5 text-[#C9A86A] group-hover:translate-x-0.5 transition-transform" />
           </button>
-          <div className="text-[11px] text-[#E5EBE7]/60 text-center">
+          <div className="text-[11px] text-[#D5DFDA]/60 text-center">
             Booking handle: <span className="font-mono text-[#C9A86A]">/{business.handle}</span>
           </div>
         </div>
@@ -165,11 +165,11 @@ export const DashboardLayout: React.FC<Props> = ({
       <div className="flex-1 flex flex-col min-w-0">
         
         {/* Top Header Bar */}
-        <header className="h-16 bg-[#0B1E16]/90 backdrop-blur-md border-b border-[#1C4435] px-4 sm:px-6 flex items-center justify-between sticky top-9 z-20">
+        <header className="h-16 bg-[#0B1E16]/90 backdrop-blur-md border-b border-[#1B362A] px-4 sm:px-6 flex items-center justify-between sticky top-9 z-20">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-[#0F241C] md:hidden text-slate-300 hover:text-white border border-[#1C4435]"
+              className="p-2 rounded-lg bg-[#0D221A] md:hidden text-slate-300 hover:text-white border border-white/10"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -192,7 +192,7 @@ export const DashboardLayout: React.FC<Props> = ({
 
             <button
               onClick={onOpenBookingSite}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#C9A86A]/15 border border-[#C9A86A]/40 text-[#C9A86A] text-xs font-bold hover:bg-[#C9A86A]/25 transition-colors cursor-pointer"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#C9A86A]/15 border border-white/20/40 text-[#C9A86A] text-xs font-bold hover:bg-[#C9A86A]/25 transition-colors cursor-pointer"
             >
               <span>Booking Page</span>
               <ExternalLink className="w-3.5 h-3.5" />

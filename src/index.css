@@ -8,7 +8,7 @@
   
   body {
     font-family: var(--font-sans);
-    background-color: #0A1B14;
+    background-color: #07130E;
     color: #FFFFFF;
   }
 
@@ -23,10 +23,10 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A1B14;
+  background: #07130E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C4435;
+  background: #1B362A;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -64,7 +64,7 @@
 }
 
 .satin-forest-card {
-  background: radial-gradient(120% 120% at 50% 0%, #15382B 0%, #0F241C 100%);
+  background: radial-gradient(120% 120% at 50% 0%, #15382B 0%, #0D221A 100%);
   border: 1px solid rgba(201, 168, 106, 0.25);
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(201, 168, 106, 0.15);
 }

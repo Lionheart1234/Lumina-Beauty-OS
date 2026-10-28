@@ -85,12 +85,12 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in">
-      <div className="relative w-full max-w-xl rounded-3xl bg-[#0F241C] border border-[#C9A86A] p-6 md:p-8 shadow-2xl text-white">
+      <div className="relative w-full max-w-xl rounded-3xl bg-[#0D221A] border border-white/20 p-6 md:p-8 shadow-2xl text-white">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-[#E5EBE7]/70 hover:text-white p-1 rounded-lg hover:bg-[#143026] transition-colors"
+          className="absolute top-5 right-5 text-[#D5DFDA]/70 hover:text-white p-1 rounded-lg hover:bg-[#091712] transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
@@ -102,7 +102,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
             <span>Launch Your Platform</span>
           </div>
           <h3 className="text-2xl font-bold text-white">Start Your 14-Day Free Trial</h3>
-          <p className="text-sm text-[#E5EBE7]/80">
+          <p className="text-sm text-[#D5DFDA]/80">
             Set up your business booking link and management dashboard in under 60 seconds.
           </p>
         </div>
@@ -119,7 +119,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                 className={`p-4 rounded-2xl border cursor-pointer transition-all ${
                   tier === 'solo'
                     ? 'border-[#C9A86A] bg-[#C9A86A]/15 text-white shadow-md'
-                    : 'border-[#1C4435] bg-[#0A1B14] hover:border-[#C9A86A]/40 text-[#E5EBE7]'
+                    : 'border-[#1B362A] bg-[#07130E] hover:border-white/30/40 text-[#D5DFDA]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -127,7 +127,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                   <span className="text-xs font-bold text-[#C9A86A] font-mono">$39.99/mo</span>
                 </div>
                 <h4 className="font-bold text-sm">Solo Professional</h4>
-                <p className="text-xs text-[#E5EBE7]/70 mt-1">1 Pro • All Features • No Limits</p>
+                <p className="text-xs text-[#D5DFDA]/70 mt-1">1 Pro • All Features • No Limits</p>
               </div>
 
               <div
@@ -135,7 +135,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                 className={`p-4 rounded-2xl border cursor-pointer transition-all ${
                   tier === 'salon'
                     ? 'border-[#C9A86A] bg-[#C9A86A]/15 text-white shadow-md'
-                    : 'border-[#1C4435] bg-[#0A1B14] hover:border-[#C9A86A]/40 text-[#E5EBE7]'
+                    : 'border-[#1B362A] bg-[#07130E] hover:border-white/30/40 text-[#D5DFDA]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -143,7 +143,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                   <span className="text-xs font-bold text-[#C9A86A] font-mono">$59.99/mo</span>
                 </div>
                 <h4 className="font-bold text-sm">Salon & Teams</h4>
-                <p className="text-xs text-[#E5EBE7]/70 mt-1">Up to 10 Pros • Shared Calendar</p>
+                <p className="text-xs text-[#D5DFDA]/70 mt-1">Up to 10 Pros • Shared Calendar</p>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                 placeholder="e.g. Aura Esthetics or Taylor Cuts"
                 value={businessName}
                 onChange={(e) => handleNameChange(e.target.value)}
-                className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3.5 py-2 text-sm text-white placeholder-[#E5EBE7]/40 focus:outline-none focus:border-[#C9A86A]"
+                className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3.5 py-2 text-sm text-white placeholder-[#E5EBE7]/40 focus:outline-none focus:border-white/30"
               />
             </div>
 
@@ -172,7 +172,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#C9A86A]"
+                  className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/30"
                 >
                   <option>Esthetics & Skincare</option>
                   <option>Hair Salon & Color</option>
@@ -187,8 +187,8 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
                 <label className="block text-xs font-medium text-white mb-1">
                   Custom Booking URL Handle
                 </label>
-                <div className="flex items-center bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-1.5 text-xs text-[#E5EBE7]/60">
-                  <span className="select-none text-[#E5EBE7]/40">lumina.app/</span>
+                <div className="flex items-center bg-[#07130E] border border-white/10 rounded-xl px-3 py-1.5 text-xs text-[#D5DFDA]/60">
+                  <span className="select-none text-[#D5DFDA]/40">lumina.app/</span>
                   <input
                     type="text"
                     required
@@ -210,7 +210,7 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
               <select
                 value={lookBusyMode}
                 onChange={(e) => setLookBusyMode(e.target.value as LookBusyMode)}
-                className="w-full bg-[#0A1B14] border border-[#1C4435] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#C9A86A]"
+                className="w-full bg-[#07130E] border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-white/30"
               >
                 <option value="moderate">Moderate: Mask 50% of slots (Recommended to look booked & busy)</option>
                 <option value="conservative">Conservative: Mask 30% of slots</option>
@@ -224,12 +224,12 @@ export const OnboardingModal: React.FC<Props> = ({ isOpen, onClose, onBusinessCr
             <button
               type="submit"
               disabled={!businessName.trim() || !handle.trim()}
-              className="w-full py-3.5 px-4 rounded-xl gold-gradient-bg text-[#0A1B14] font-extrabold text-sm transition-all shadow-lg shadow-[#C9A86A]/20 flex items-center justify-center gap-2 cursor-pointer hover:brightness-105 disabled:opacity-50"
+              className="w-full py-3.5 px-4 rounded-xl gold-gradient-bg text-[#07130E] font-extrabold text-sm transition-all shadow-lg shadow-[#C9A86A]/20 flex items-center justify-center gap-2 cursor-pointer hover:brightness-105 disabled:opacity-50"
             >
               <span>Create Business & Open Dashboard</span>
               <ArrowRight className="w-4 h-4" />
             </button>
-            <p className="text-[11px] text-center text-[#E5EBE7]/70 mt-2 flex items-center justify-center gap-1.5">
+            <p className="text-[11px] text-center text-[#D5DFDA]/70 mt-2 flex items-center justify-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
               14 days free, then {tier === 'solo' ? '$39.99' : '$59.99'}/month. No contracts.
             </p>
