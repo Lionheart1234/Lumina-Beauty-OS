@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #0A1B14;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C4435;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A86A;
+}
+
+/* Glassmorphism effects with Velvet Forest Green & Satin Metallic Champagne Gold */
+.glass-panel {
+  background: rgba(15, 36, 28, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 106, 0.28);
+}
+
+.glass-panel-subtle {
+  background: rgba(11, 30, 22, 0.80);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 106, 0.18);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0D4 0%, #E0C184 35%, #C9A86A 65%, #9E7C38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F4E4C4 0%, #D4B26F 35%, #C9A86A 65%, #9E7C38 100%);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(201, 168, 106, 0.4);
+  box-shadow: 0 0 20px -3px rgba(201, 168, 106, 0.2);
+}
+
+.satin-forest-card {
+  background: radial-gradient(120% 120% at 50% 0%, #15382B 0%, #0F241C 100%);
+  border: 1px solid rgba(201, 168, 106, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(201, 168, 106, 0.15);
+}
+
